@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./ProductList.css";
+import "./style/ProductList.css";
 
 const STATUS = (qty) => {
   if (qty === 0) return { label: "Sold Out", cls: "badge-soldout" };

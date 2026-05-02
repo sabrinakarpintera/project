@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import "./AdminDashboard1.css";
+import "./style/AdminDashboard1.css";
  
 const mockStats = {
   totalSales: 24830.0,

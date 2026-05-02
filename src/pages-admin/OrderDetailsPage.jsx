@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./AdminDashboard1.css";
+import "./style/AdminDashboard1.css";
 import {
   mockOrders,
   statusColors,
