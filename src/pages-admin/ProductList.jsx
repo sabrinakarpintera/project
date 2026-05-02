@@ -89,7 +89,6 @@ export default function ProductList() {
         </button>
       </div>
 
-      {/* Filters */}
       <div className="pl-controls">
         <div className="pl-search-wrap">
           <span className="pl-search-icon">⌕</span>
@@ -113,7 +112,6 @@ export default function ProductList() {
         </div>
       </div>
 
-      {/* Grid */}
       {loading ? (
         <div className="pl-loading">
           <div className="pl-spinner" />
@@ -152,7 +150,6 @@ export default function ProductList() {
         </div>
       )}
 
-      {/* Detail Modal */}
       {(selected || detailLoading) && (
         <div className="pl-overlay" onClick={closeDetail}>
           <div className="pl-modal" onClick={(e) => e.stopPropagation()}>
@@ -212,7 +209,6 @@ export default function ProductList() {
                   </div>
                 </div>
 
-                {/* Stock Stats */}
                 <div className="pm-stats">
                   <div className="pm-stat">
                     <span className="pm-stat-label">Current Stock</span>
@@ -236,7 +232,6 @@ export default function ProductList() {
                   </div>
                 </div>
 
-                {/* Actions */}
                 <div className="pm-actions">
                   <button
                     className="pm-btn-edit"
@@ -257,7 +252,6 @@ export default function ProductList() {
         </div>
       )}
 
-      {/* Delete Confirm Dialog */}
       {deleteConfirm && (
         <div className="pl-overlay">
           <div className="pl-confirm">

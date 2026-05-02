@@ -181,7 +181,6 @@ export default function AdminDashboard() {
  
   return (
     <div className="admin-root">
-      {/* Top Nav */}
       <header className="admin-header">
         <div className="admin-header-inner">
           <span className="admin-logo">Fuku</span>
@@ -204,7 +203,6 @@ export default function AdminDashboard() {
         </div>
       </header>
  
-      {/* Main Content */}
       <main className="admin-main">
         {activePage === "Home" && (
           <HomePage stats={mockStats} orders={mockOrders} onView={(o) => { setSelectedOrder(o); setActivePage("Order Details"); }} />
@@ -223,7 +221,6 @@ export default function AdminDashboard() {
         )}
       </main>
  
-      {/* Order Modal */}
       {selectedOrder && (
         <OrderModal order={selectedOrder} onClose={() => setSelectedOrder(null)} />
       )}
@@ -231,7 +228,6 @@ export default function AdminDashboard() {
   );
 }
  
-/* ─── HOME PAGE ─── */
 function HomePage({ stats, orders, onView }) {
   const recentOrders = orders.slice(0, 5);
   return (
@@ -241,7 +237,6 @@ function HomePage({ stats, orders, onView }) {
         <span className="page-date">April 28, 2026</span>
       </div>
  
-      {/* Stats Grid */}
       <div className="stats-grid">
         <StatCard
           label="Total Sales"
@@ -275,7 +270,6 @@ function HomePage({ stats, orders, onView }) {
         />
       </div>
  
-      {/* Recent Orders */}
       <div className="section-card">
         <div className="section-header">
           <h2 className="section-title">Recent Orders</h2>
@@ -314,7 +308,6 @@ function StatCard({ label, value, icon, accent }) {
   );
 }
  
-/* ─── ORDER DETAILS PAGE ─── */
 function OrderDetailsPage({ orders, filterStatus, setFilterStatus, filters, onView }) {
   return (
     <div className="page-orders">
@@ -393,7 +386,6 @@ function OrderRowWithAction({ order, onView }) {
   );
 }
  
-/* ─── ORDER MODAL ─── */
 function OrderModal({ order, onClose }) {
   const trackIdx = getTrackingIndex(order.status);
  
@@ -404,7 +396,6 @@ function OrderModal({ order, onClose }) {
         <h2 className="modal-title">Order Details</h2>
         <p className="modal-subtitle">{order.id} · {order.date}</p>
  
-        {/* Tracking */}
         {order.status !== "Cancelled" ? (
           <div className="tracking-bar">
             {trackingSteps.map((step, i) => (
@@ -425,7 +416,6 @@ function OrderModal({ order, onClose }) {
  
         <div className="modal-divider" />
  
-        {/* Customer */}
         <div className="modal-customer-row">
           <span className="modal-field-label">Customer</span>
           <span className="modal-field-value">{order.customer}</span>
@@ -433,7 +423,6 @@ function OrderModal({ order, onClose }) {
  
         <div className="modal-divider" />
  
-        {/* Products */}
         <div className="modal-products">
           {order.products.map((p, i) => (
             <div key={i} className="modal-product-row">
@@ -449,7 +438,6 @@ function OrderModal({ order, onClose }) {
  
         <div className="modal-divider" />
  
-        {/* Summary */}
         <div className="modal-summary">
           <div className="modal-summary-row">
             <span>Subtotal</span><span>₱{order.subtotal.toLocaleString("en-PH", { minimumFractionDigits: 2 })}</span>
@@ -476,7 +464,6 @@ function OrderModal({ order, onClose }) {
   );
 }
  
-/* ─── BLANK PAGE ─── */
 function BlankPage({ title }) {
   return (
     <div className="blank-page">
@@ -485,7 +472,6 @@ function BlankPage({ title }) {
   );
 }
  
-/* ─── ICONS ─── */
 function HomeIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

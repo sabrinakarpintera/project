@@ -8,7 +8,6 @@ import {
   getTrackingIndex,
 } from "./mockData";
 
-/* ─── ICONS ─── */
 function HomeIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -55,7 +54,6 @@ function SignOutIcon() {
   );
 }
 
-/* ─── MAIN ─── */
 export default function OrderDetailsPage() {
   const navigate = useNavigate();
 
@@ -82,7 +80,6 @@ export default function OrderDetailsPage() {
 
   return (
     <div className="admin-root">
-      {/* ── Header ── */}
       <header className="admin-header">
         <div className="admin-header-inner">
           <span className="admin-logo">Fuku</span>
@@ -105,14 +102,12 @@ export default function OrderDetailsPage() {
         </div>
       </header>
 
-      {/* ── Main ── */}
       <main className="admin-main">
         <div className="page-orders">
           <div className="page-title-row">
             <h1 className="page-title">Order Details</h1>
           </div>
 
-          {/* Filter Tabs */}
           <div className="filter-row">
             {filters.map((f) => (
               <button
@@ -125,7 +120,6 @@ export default function OrderDetailsPage() {
             ))}
           </div>
 
-          {/* Orders Table */}
           <div className="section-card">
             <table className="orders-table">
               <thead>
@@ -175,7 +169,6 @@ export default function OrderDetailsPage() {
         </div>
       </main>
 
-      {/* ── Modal ── */}
       {selectedOrder && (
         <OrderModal order={selectedOrder} onClose={() => setSelectedOrder(null)} />
       )}
@@ -183,7 +176,6 @@ export default function OrderDetailsPage() {
   );
 }
 
-/* ─── ORDER MODAL ─── */
 function OrderModal({ order, onClose }) {
   const trackIdx = getTrackingIndex(order.status);
 
@@ -194,7 +186,6 @@ function OrderModal({ order, onClose }) {
         <h2 className="modal-title">Order Details</h2>
         <p className="modal-subtitle">{order.id} · {order.date}</p>
 
-        {/* Tracking */}
         {order.status !== "Cancelled" ? (
           <div className="tracking-bar">
             {trackingSteps.map((step, i) => (
@@ -217,7 +208,6 @@ function OrderModal({ order, onClose }) {
 
         <div className="modal-divider" />
 
-        {/* Customer */}
         <div className="modal-customer-row">
           <span className="modal-field-label">Customer</span>
           <span className="modal-field-value">{order.customer}</span>
@@ -225,7 +215,6 @@ function OrderModal({ order, onClose }) {
 
         <div className="modal-divider" />
 
-        {/* Products */}
         <div className="modal-products">
           {order.products.map((p, i) => (
             <div key={i} className="modal-product-row">
@@ -245,7 +234,6 @@ function OrderModal({ order, onClose }) {
 
         <div className="modal-divider" />
 
-        {/* Summary */}
         <div className="modal-summary">
           <div className="modal-summary-row">
             <span>Subtotal</span>

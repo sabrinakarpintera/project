@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
-/* ─── RESET & ROOT ─── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -44,7 +43,6 @@ body {
   min-height: 100vh;
 }
 
-/* ─── HEADER ─── */
 .admin-header {
   background: var(--beige-card);
   border-bottom: 1px solid var(--beige-border);
@@ -135,14 +133,12 @@ body {
   border-color: var(--status-cancelled-fg);
 }
 
-/* ─── MAIN ─── */
 .admin-main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 36px 32px 60px;
 }
 
-/* ─── PAGE TITLES ─── */
 .page-title-row {
   display: flex;
   align-items: baseline;
@@ -163,7 +159,6 @@ body {
   font-weight: 400;
 }
 
-/* ─── STATS GRID ─── */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -232,7 +227,6 @@ body {
   letter-spacing: -0.3px;
 }
 
-/* ─── SECTION CARD ─── */
 .section-card {
   background: var(--beige-card);
   border: 1px solid var(--beige-border);
@@ -252,7 +246,6 @@ body {
   margin-bottom: 16px;
 }
 
-/* ─── ORDERS TABLE ─── */
 .orders-table {
   width: 100%;
   border-collapse: collapse;
@@ -320,7 +313,6 @@ body {
   color: var(--white);
 }
 
-/* ─── STATUS BADGES ─── */
 .status-badge {
   display: inline-block;
   padding: 4px 12px;
@@ -334,7 +326,6 @@ body {
 .status-processing { background: var(--status-processing-bg); color: var(--status-processing-fg); }
 .status-cancelled  { background: var(--status-cancelled-bg);  color: var(--status-cancelled-fg); }
 
-/* ─── FILTER ROW ─── */
 .filter-row {
   display: flex;
   gap: 10px;
@@ -366,12 +357,10 @@ body {
   border-color: var(--brown-dark);
 }
 
-/* ─── ORDER DETAILS PAGE ─── */
 .page-orders {
   animation: fadeUp 0.3s ease;
 }
 
-/* ─── MODAL ─── */
 .modal-overlay {
   position: fixed;
   inset: 0;

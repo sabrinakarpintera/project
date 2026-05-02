@@ -14,7 +14,6 @@ body {
   justify-content: center;
 }
 
-/* PAGE WRAPPER */
 
 .add-product-wrapper {
   width: 100%;
@@ -22,7 +21,6 @@ body {
   padding: 50px 20px 80px;
 }
 
-/* HEADER */
 
 .add-product-wrapper h2 {
   font-size: 26px;
@@ -40,15 +38,12 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* FORM LAYOUT */
 
 .add-product-form {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
-
-/* INPUTS & TEXTAREA */
 
 .add-product-form input[type="text"],
 .add-product-form input[type="number"],
@@ -77,8 +72,6 @@ body {
   min-height: 100px;
 }
 
-/* DYNAMIC FIELD ROWS (sizes / colors) */
-
 .field-list {
   display: flex;
   flex-direction: column;
@@ -103,7 +96,6 @@ body {
   box-shadow: 0 0 0 2px #bbb;
 }
 
-/* ADD SIZE / ADD COLOR BUTTONS */
 
 .btn-add-field {
   align-self: flex-start;
@@ -125,7 +117,6 @@ body {
   border-color: #222;
 }
 
-/* FILE INPUT */
 
 .file-input-wrapper {
   display: flex;
@@ -150,7 +141,6 @@ body {
   border: none;
 }
 
-/* DIVIDER */
 
 .form-divider {
   border: none;
@@ -158,7 +148,6 @@ body {
   margin: 8px 0;
 }
 
-/* SUBMIT BUTTON */
 
 .btn-submit {
   background: #222;
@@ -180,7 +169,6 @@ body {
   background: #444;
 }
 
-/* FIELD ROW — input + delete button side by side */
 
 .field-row {
   display: flex;

@@ -30,7 +30,6 @@
   color: var(--text);
 }
 
-/* Header */
 .pl-header {
   display: flex;
   align-items: center;
@@ -76,7 +75,6 @@
 
 .pl-add-btn:hover { opacity: 0.82; transform: translateY(-1px); }
 
-/* Controls */
 .pl-controls {
   display: flex;
   align-items: center;
@@ -141,7 +139,6 @@
   color: var(--accent-fg);
 }
 
-/* Grid */
 .pl-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -180,7 +177,6 @@
 
 .pl-card:hover .pl-card-img { transform: scale(1.04); }
 
-/* Badges */
 .pl-badge {
   position: absolute;
   top: 10px;
@@ -238,7 +234,6 @@
   border: 1px solid var(--border);
 }
 
-/* Loading / Empty */
 .pl-loading {
   display: flex;
   flex-direction: column;
@@ -258,7 +253,9 @@
   animation: spin 0.7s linear infinite;
 }
 
-@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes spin { 
+  to { transform: rotate(360deg); } 
+}
 
 .pl-empty {
   text-align: center;
@@ -268,7 +265,6 @@
 
 .pl-empty-icon { font-size: 3rem; display: block; margin-bottom: 12px; }
 
-/* Overlay */
 .pl-overlay {
   position: fixed;
   inset: 0;
@@ -282,9 +278,11 @@
   animation: fadeIn 0.2s ease;
 }
 
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeIn { 
+  from { opacity: 0; } 
+  to { opacity: 1; } 
+}
 
-/* Modal */
 .pl-modal {
   background: var(--surface);
   border-radius: 20px;
@@ -323,7 +321,6 @@
 
 .pl-modal-close:hover { background: var(--accent); color: white; border-color: var(--accent); }
 
-/* Modal Top */
 .pm-top {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -369,7 +366,6 @@
   color: var(--text-muted);
 }
 
-/* non-absolute badges inside modal */
 .pm-meta .pl-badge {
   position: static;
 }
@@ -444,7 +440,6 @@
   color: var(--text-muted);
 }
 
-/* Stats */
 .pm-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -490,7 +485,6 @@
 .pm-stat-status.badge-low     { background: var(--low-bg); color: var(--low); }
 .pm-stat-status.badge-soldout { background: var(--soldout-bg); color: var(--soldout); }
 
-/* Actions */
 .pm-actions {
   display: flex;
   gap: 12px;
@@ -517,7 +511,6 @@
 .pm-btn-delete { background: var(--soldout-bg); color: var(--soldout); border: 1.5px solid #f5c6c6; }
 .pm-btn-cancel { background: var(--surface-2); color: var(--text); border: 1.5px solid var(--border); }
 
-/* Confirm dialog */
 .pl-confirm {
   background: var(--surface);
   border-radius: 16px;
@@ -547,7 +540,6 @@
   gap: 12px;
 }
 
-/* Responsive */
 @media (max-width: 700px) {
   .pl-wrapper { padding: 20px 16px; }
   .pm-top { grid-template-columns: 1fr; }
