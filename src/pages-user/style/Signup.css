@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    background-color: #ffffff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.signBody {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container1 {
+    background-color: #F4EAE0;
+    width: 55%;
+    min-width: 380px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 3rem;
+    z-index: 1;
+}
+
+.bg {
+    flex: 1;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bg-illustration {
+    width: 100%;
+    max-width: 560px;
+    object-fit: contain;
+    display: block;
+    position: relative;
+    left: -4rem;
+}
+
+.logo1 {
+    width: 280px;
+    margin-bottom: 1rem;
+    align-self: center;
+}
+
+.logo1 img {
+    width: 100%;
+    height: auto;
+}
+
+form h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.2rem;
+    align-self: flex-start;
+}
+
+form h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 0.4rem;
+    align-self: flex-start;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+input {
+    background-color: #FAF6F0;
+    width: 100%;
+    height: 52px;
+    border: 0.5px solid #d4c5b8;
+    border-radius: 25px;
+    padding: 0 1.25rem;
+    font-family: "Outfit", sans-serif;
+    font-size: 1.05rem;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+input:focus {
+    border-color: #c8a98a;
+    box-shadow: 0 0 0 3px rgba(200, 169, 138, 0.2);
+}
+
+.register {
+    background-color: #F4DFC8;
+    color: #1a1a1a;
+    width: 160px;
+    height: 52px;
+    border: 0.5px solid #c8b09a;
+    border-radius: 50px;
+    font-family: "Outfit", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    align-self: center;
+    margin-top: 0rem;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.register:hover {
+    background-color: #eacfb0;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.error {
+    color: #c0392b;
+    font-size: 0.82rem;
+    min-height: 1rem;
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+form > p:last-of-type {
+    font-size: 0.95rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    align-self: center;
+}
+
+.login {
+    background: none;
+    border: none;
+    color: #1a1a1a;
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.login:hover {
+    color: #8a6a50;
+    text-decoration: underline;
+}
